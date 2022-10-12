@@ -55,7 +55,7 @@ export function isLocalUrl(url: string): boolean {
   const parser = document.createElement('a');
   parser.href = url;
   const host = parser.hostname;
-  return host === 'localhost' || host === '127.0.0.1';
+  return host === 'localhost' || host === '10.0.4.12';
 }
 
 export function animatedScroll(element: HTMLElement, scrollTop: number, delay?: number) {

@@ -133,14 +133,14 @@ public class SnmpDeviceSimulatorV3 extends BaseAgent {
 
         targetMIB.addTargetAddress(new OctetString("notificationV2c"),
                 TransportDomains.transportDomainUdpIpv4,
-                new OctetString(new UdpAddress("127.0.0.1/162").getValue()),
+                new OctetString(new UdpAddress("10.0.4.12/162").getValue()),
                 200, 1,
                 new OctetString("notify"),
                 new OctetString("v2c"),
                 StorageType.permanent);
         targetMIB.addTargetAddress(new OctetString("notificationV3"),
                 TransportDomains.transportDomainUdpIpv4,
-                new OctetString(new UdpAddress("127.0.0.1/1162").getValue()),
+                new OctetString(new UdpAddress("10.0.4.12/1162").getValue()),
                 200, 1,
                 new OctetString("notify"),
                 new OctetString("v3notify"),

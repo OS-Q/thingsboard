@@ -68,7 +68,7 @@ import static org.mockito.Mockito.verify;
 public class MqttTransportHandlerTest {
 
     public static final int MSG_QUEUE_LIMIT = 10;
-    public static final InetSocketAddress IP_ADDR = new InetSocketAddress("127.0.0.1", 9876);
+    public static final InetSocketAddress IP_ADDR = new InetSocketAddress("10.0.4.12", 9876);
     public static final int TIMEOUT = 30;
 
     @Mock

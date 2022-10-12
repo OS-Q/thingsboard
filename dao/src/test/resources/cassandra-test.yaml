@@ -205,7 +205,7 @@ seed_provider:
       parameters:
           # seeds is actually a comma-delimited list of addresses.
           # Ex: "<ip1>,<ip2>,<ip3>"
-          - seeds: "127.0.0.1"
+          - seeds: "10.0.4.12"
 
 
 # For workloads with more data than can fit in memory, Cassandra's
@@ -268,7 +268,7 @@ ssl_storage_port: 7011
 # address associated with the hostname (it might not be).
 #
 # Setting this to 0.0.0.0 is always wrong.
-listen_address: 127.0.0.1
+listen_address: 10.0.4.12
 
 start_native_transport: true
 # port for the CQL native transport to listen for clients on

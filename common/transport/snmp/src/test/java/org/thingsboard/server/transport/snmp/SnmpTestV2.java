@@ -34,7 +34,7 @@ public class SnmpTestV2 {
 
 //        while (true) {
 //            new Scanner(System.in).nextLine();
-//            device.sendTrap("127.0.0.1", 1062, Map.of(".1.3.6.1.2.87.1.56", "12"));
+//            device.sendTrap("10.0.4.12", 1062, Map.of(".1.3.6.1.2.87.1.56", "12"));
 //            System.out.println("sent");
 //        }
 

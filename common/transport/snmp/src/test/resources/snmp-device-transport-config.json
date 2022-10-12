@@ -1,5 +1,5 @@
 {
-  "address": "127.0.0.1",
+  "address": "10.0.4.12",
   "port": 1610,
   "community": "public",
   "protocolVersion": "V2C"
