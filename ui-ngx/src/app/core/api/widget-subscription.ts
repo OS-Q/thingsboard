@@ -97,6 +97,7 @@ export class WidgetSubscription implements IWidgetSubscription {
   subscriptionTimewindow: SubscriptionTimewindow;
   useDashboardTimewindow: boolean;
   useTimewindow: boolean;
+  onTimewindowChangeFunction: (timewindow: Timewindow) => Timewindow;
   tsOffset = 0;
 
   hasDataPageLink: boolean;
@@ -203,6 +204,7 @@ export class WidgetSubscription implements IWidgetSubscription {
       this.timeWindow = {};
       this.useDashboardTimewindow = options.useDashboardTimewindow;
       this.useTimewindow = true;
+      this.onTimewindowChangeFunction = options.onTimewindowChangeFunction || ((timewindow) => timewindow);
       if (this.useDashboardTimewindow) {
         this.timeWindowConfig = deepClone(options.dashboardTimewindow);
       } else {
@@ -247,6 +249,7 @@ export class WidgetSubscription implements IWidgetSubscription {
       this.originalTimewindow = null;
       this.timeWindow = {};
       this.useDashboardTimewindow = options.useDashboardTimewindow;
+      this.onTimewindowChangeFunction = options.onTimewindowChangeFunction || ((timewindow) => timewindow);
       this.stateData = options.stateData;
       this.useTimewindow = this.type === widgetType.timeseries || datasourcesHasAggregation(this.configuredDatasources);
       if (this.useDashboardTimewindow) {
